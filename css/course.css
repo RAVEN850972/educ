@@ -1,0 +1,350 @@
+/* Специфические стили для обучающего курса */
+.course-content {
+    background-color: var(--card-bg);
+    padding: 50px 0;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: var(--secondary-bg);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: rgba(0, 136, 204, 0.2);
+    margin: 0 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #0088CC, #31A2F2);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.block-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.block-header {
+    background-color: var(--secondary-bg);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.block-header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.block-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, #0088CC, #31A2F2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center
+border-radius: 50%;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.block-content {
+    padding: 20px;
+}
+
+.section h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.test-container {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.options {
+    display: grid;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option.selected {
+    background-color: var(--accent);
+    color: white;
+}
+
+.option.correct {
+    background-color: #35D073;
+    color: white;
+}
+
+.option.incorrect {
+    background-color: #F55C5D;
+    color: white;
+}
+
+.radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.option.selected .radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn.check-answers,
+.btn.next-block {
+    padding: 10px 20px;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.completion-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #35D073;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 15px;
+    font-size: 0.8rem;
+}
+
+.completion-badge svg {
+    margin-right: 5px;
+}
+
+.test-result {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: none;
+}
+
+.test-result.success {
+    background-color: rgba(53, 208, 115, 0.1);
+    color: #35D073;
+    display: block;
+}
+
+.test-result.error {
+    background-color: rgba(245, 92, 93, 0.1);
+    color: #F55C5D;
+    display: block;
+}
+
+.certificate {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f9fc 100%);
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 136, 204, 0.1);
+}
+
+.certificate-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.1;
+}
+
+.certificate h2 {
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+
+.certificate-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text);
+    margin: 20px 0;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .progress-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .progress-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .block-header h2 {
+        font-size: 1rem;
+    }
+
+    .block-number {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn.check-answers,
+    .btn.next-block {
+        width: 100%;
+    }
+}
+/* Специфические стили для обучающего курса */
+.course-content {
+    background-color: var(--card-bg);
+    padding: 50px 0;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: var(--secondary-bg);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: rgba(0, 136, 204, 0.2);
+    margin: 0 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #0088CC, #31A2F2);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.block-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.block-header {
+    background-color: var(--secondary-bg);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.block-header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.block-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, #0088CC, #31A2F2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
