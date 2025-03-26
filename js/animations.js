@@ -114,3 +114,4 @@ window.animationManager = {
     smoothScroll,
     setupMobileMenu
 };
+

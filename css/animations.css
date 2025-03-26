@@ -1,0 +1,350 @@
+/* Стили для анимации конфетти */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    border-radius: 50%;
+    z-index: 999;
+    animation: confettiFall linear forwards;
+}
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    max-width: 80%;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background-color: #35D073;
+    border-left: 5px solid #28A058;
+}
+
+.notification.error {
+    background-color: #F55C5D;
+    border-left: 5px solid #D03B3C;
+}
+
+.notification.warning {
+    background-color: #FF9500;
+    border-left: 5px solid #D67E00;
+}
+
+.notification.info {
+    background-color: #0088CC;
+    border-left: 5px solid #006699;
+}
+
+/* Стили для эффекта перелистывания страниц книги */
+.book-effect {
+    position: relative;
+}
+
+.book-effect:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0)
+    );
+    z-index: 2;
+}
+
+.book-effect .block-content {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Эффект тени от книжной страницы */
+.block-card {
+    position: relative;
+}
+
+.block-card:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1)
+    );
+    z-index: 1;
+    transform: skewX(45deg);
+    transform-origin: bottom right;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.block-card:hover:after {
+    opacity: 1;
+}
+
+/* Стили для закладки */
+.bookmark {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 20px;
+    height: 40px;
+    background: #FF5252;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+    transition: transform 0.3s ease;
+}
+
+.bookmark:hover {
+    transform: translateY(-5px);
+}
+
+/* Стили для страницы сертификата */
+.certificate-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.certificate-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+        rgba(0, 136, 204, 0.1) 20%, 
+        transparent 20%
+    );
+    background-position: 0 0;
+    background-size: 20px 20px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.certificate-date {
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+/* Стили для точек индикаторов страниц */
+.page-dot {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.page-dot:hover {
+    transform: scale(1.3);
+}
+
+.page-dot.completed {
+    background-color: #35D073;
+}
+
+.page-dot.completed:before {
+    content: "✓";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #35D073;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.page-dot.completed:hover:before {
+    opacity: 1;
+}
+
+/* Добавление эффекта загрузки для кнопок */
+.btn.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn.loading:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Эффекты для области с контентом */
+.block-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.block-content:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 136, 204, 0.1),
+        transparent
+    );
+    z-index: 1;
+}
+
+/* Улучшенная стилизация ссылок в контенте */
+.section a {
+    color: #0088CC;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.section a:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #0088CC;
+    transition: width 0.3s ease;
+}
+
+.section a:hover {
+    color: #006699;
+}
+
+.section a:hover:after {
+    width: 100%;
+}
+
+/* Стили для эффекта загрузки страницы */
+.page-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-loading.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ВАЖНО: Убираем z-index после скрытия */
+.page-loading.hide {
+    z-index: -1;
+}
+
+.dark-theme .page-loading {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(0, 136, 204, 0.2);
+    border-radius: 50%;
+    border-top-color: #0088CC;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Медиа-запросы для адаптивности анимаций */
+@media (max-width: 768px) {
+    .notification {
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        transform: translateY(120%);
+    }
+    
+    .notification.show {
+        transform: translateY(0);
+    }
+    
+    .confetti {
+        width: 10px !important;
+        height: 10px !important;
+    }
+}
+
+/* Поддержка темной темы для эффектов */
+.dark-theme .block-card:after {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.05)
+    );
+}
+
+.dark-theme .block-content:before {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 136, 204, 0.2),
+        transparent
+    );
+}
+
+.dark-theme .certificate-date {
+    color: #aaa;
+}

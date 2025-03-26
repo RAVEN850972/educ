@@ -3,8 +3,27 @@
  * Координирует инициализацию всех компонентов
  */
 
+function removeLoadingIndicator() {
+    const pageLoading = document.querySelector('.page-loading');
+    if (pageLoading) {
+        // Добавляем классы для анимации исчезновения
+        pageLoading.classList.add('hide');
+        
+        // Принудительное удаление через небольшой таймаут
+        setTimeout(() => {
+            pageLoading.remove(); // Полное удаление элемента из DOM
+        }, 600);
+    }
+}
+
 // Инициализация всех функций при загрузке DOM
 document.addEventListener('DOMContentLoaded', () => {
+    // Попытка удаления индикатора загрузки несколькими способами
+    removeLoadingIndicator();
+
+    // Дополнительный обработчик в случае задержки
+    setTimeout(removeLoadingIndicator, 100);
+    
     // Загрузка составляющих сайта по порядку
     initTheme();
     initMatrix();
@@ -12,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initTokenomics();
     
     // Слушатели для жизненного цикла страницы
-    window.addEventListener('load', onFullLoad);
-    window.addEventListener('beforeunload', onBeforeUnload);
-    
-    console.log('SMTH Token site initialized successfully');
+    window.addEventListener('load', () => {
+        removeLoadingIndicator();
+        onFullLoad();
+    });
 });
 
 // Инициализация темы и предпочтений
@@ -84,3 +103,8 @@ function onBeforeUnload() {
     // Сохранение любых пользовательских настроек или состояний
     // Очистка ресурсов, если необходимо
 }
+
+// Добавляем принудительную инициализацию при полной загрузке
+window.addEventListener('load', () => {
+    removeLoadingIndicator();
+});
