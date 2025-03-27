@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Модульная архитектура токена SMTH</text>
+  
+  <!-- Central Module - Base Token -->
+  <circle cx="400" cy="200" r="80" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+  <text x="400" y="190" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Базовый Токен</text>
+  <text x="400" y="215" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Основные функции</text>
+  <text x="400" y="230" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Балансы и переводы</text>
+  
+  <!-- Governance Module -->
+  <circle cx="200" cy="350" r="70" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <text x="200" y="340" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Модуль</text>
+  <text x="200" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Управления</text>
+  <text x="200" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Голосование</text>
+  <text x="200" y="400" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Предложения</text>
+  
+  <!-- Staking Module -->
+  <circle cx="400" cy="450" r="70" fill="#2ecc71" stroke="#27ae60" stroke-width="3"/>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Модуль</text>
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Стейкинга</text>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Вознаграждения</text>
+  <text x="400" y="500" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Блокировка</text>
+  
+  <!-- Vesting Module -->
+  <circle cx="600" cy="350" r="70" fill="#9b59b6" stroke="#8e44ad" stroke-width="3"/>
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Модуль</text>
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Вестинга</text>
+  <text x="600" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Распределение по</text>
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">графику</text>
+  
+  <!-- Kickstarter Module -->
+  <circle cx="400" cy="110" r="60" fill="#f39c12" stroke="#d35400" stroke-width="3"/>
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Модуль</text>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Kickstarter</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Финансирование</text>
+  
+  <!-- Connections -->
+  <line x1="380" y1="170" x2="400" y2="140" stroke="#d35400" stroke-width="3"/>
+  <line x1="400" y1="280" x2="400" y2="380" stroke="#27ae60" stroke-width="3"/>
+  <line x1="325" y1="235" x2="250" y2="300" stroke="#c0392b" stroke-width="3"/>
+  <line x1="475" y1="235" x2="550" y2="300" stroke="#8e44ad" stroke-width="3"/>
+  
+  <!-- Security Layer -->
+  <path d="M 400 570 m -300, 0 a 300,300 0 1,0 600,0 a 300,300 0 1,0 -600,0" fill="none" stroke="#34495e" stroke-width="3" stroke-dasharray="10,10"/>
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#34495e">Безопасность и Защита</text>
+</svg>

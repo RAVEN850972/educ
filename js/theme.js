@@ -1,5 +1,5 @@
 /**
- * Управление темой сайта SmAIth Token
+ * Управление темой сайта SmAIth Learn
  * Реализует переключение между светлой и темной темой
  */
 
@@ -7,6 +7,8 @@
 function setupThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
+    
+    if (!themeToggle) return; // Выходим, если кнопка не найдена
     
     // Проверяем сохраненную тему в localStorage
     const savedTheme = localStorage.getItem('theme');
@@ -37,7 +39,10 @@ function checkUserPreferences() {
     // Если тема не установлена пользователем, используем системную
     if (savedTheme === null && prefersDarkScheme.matches) {
         document.body.classList.add('dark-theme');
-        document.getElementById('theme-toggle').querySelector('.theme-toggle-icon').textContent = '🌙';
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.querySelector('.theme-toggle-icon').textContent = '🌙';
+        }
     }
     
     // Следим за изменением системных предпочтений
@@ -45,17 +50,33 @@ function checkUserPreferences() {
         if (localStorage.getItem('theme') === null) {
             if (e.matches) {
                 document.body.classList.add('dark-theme');
-                document.getElementById('theme-toggle').querySelector('.theme-toggle-icon').textContent = '🌙';
+                const themeToggle = document.getElementById('theme-toggle');
+                if (themeToggle) {
+                    themeToggle.querySelector('.theme-toggle-icon').textContent = '🌙';
+                }
             } else {
                 document.body.classList.remove('dark-theme');
-                document.getElementById('theme-toggle').querySelector('.theme-toggle-icon').textContent = '☀️';
+                const themeToggle = document.getElementById('theme-toggle');
+                if (themeToggle) {
+                    themeToggle.querySelector('.theme-toggle-icon').textContent = '☀️';
+                }
             }
         }
     });
 }
 
+// Инициализация темы
+function initTheme() {
+    setupThemeToggle();
+    checkUserPreferences();
+}
+
+// Запуск после загрузки DOM
+document.addEventListener('DOMContentLoaded', initTheme);
+
 // Экспорт функций
 window.themeManager = {
     setupThemeToggle,
-    checkUserPreferences
+    checkUserPreferences,
+    initTheme
 };

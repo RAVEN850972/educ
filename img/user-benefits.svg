@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Преимущества для обычных пользователей</text>
+  
+  <!-- User figure -->
+  <circle cx="400" cy="120" r="50" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <ellipse cx="400" cy="105" rx="25" ry="25" fill="#f5f7fa"/>
+  <path d="M 375 125 Q 400 160, 425 125" stroke="#f5f7fa" stroke-width="3" fill="none"/>
+  
+  <!-- Benefits cards -->
+  <!-- Card 1 -->
+  <rect x="100" y="200" width="200" height="120" rx="10" ry="10" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Доступность</text>
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Низкий порог входа</text>
+  <text x="200" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">для инвестиций в</text>
+  <text x="200" y="300" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">технологические проекты</text>
+  
+  <!-- Card 2 -->
+  <rect x="320" y="200" width="200" height="120" rx="10" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="420" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Прозрачность</text>
+  <text x="420" y="260" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Все операции записаны</text>
+  <text x="420" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">в блокчейне и доступны</text>
+  <text x="420" y="300" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">для проверки</text>
+  
+  <!-- Card 3 -->
+  <rect x="540" y="200" width="200" height="120" rx="10" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="640" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Участие в управлении</text>
+  <text x="640" y="260" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Голосование за проекты</text>
+  <text x="640" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">и решения по развитию</text>
+  <text x="640" y="300" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">платформы</text>
+  
+  <!-- Card 4 -->
+  <rect x="100" y="340" width="200" height="120" rx="10" ry="10" fill="#f39c12" stroke="#d35400" stroke-width="2"/>
+  <text x="200" y="370" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Безопасность</text>
+  <text x="200" y="400" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Поэтапное финансирование</text>
+  <text x="200" y="420" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">снижает риски потери</text>
+  <text x="200" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">средств</text>
+  
+  <!-- Card 5 -->
+  <rect x="320" y="340" width="200" height="120" rx="10" ry="10" fill="#1abc9c" stroke="#16a085" stroke-width="2"/>
+  <text x="420" y="370" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Доход</text>
+  <text x="420" y="400" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">От успешных проектов</text>
+  <text x="420" y="420" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Стейкинга и роста</text>
+  <text x="420" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">стоимости токенов</text>
+  
+  <!-- Card 6 -->
+  <rect x="540" y="340" width="200" height="120" rx="10" ry="10" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+  <text x="640" y="370" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Доступ к технологиям</text>
+  <text x="640" y="400" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Приоритетный доступ</text>
+  <text x="640" y="420" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">к инновационным</text>
+  <text x="640" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">продуктам</text>
+  
+  <!-- Connection lines -->
+  <line x1="400" y1="170" x2="200" y2="200" stroke="#27ae60" stroke-width="2"/>
+  <line x1="400" y1="170" x2="420" y2="200" stroke="#c0392b" stroke-width="2"/>
+  <line x1="400" y1="170" x2="640" y2="200" stroke="#8e44ad" stroke-width="2"/>
+  <line x1="400" y1="170" x2="200" y2="340" stroke="#d35400" stroke-width="2"/>
+  <line x1="400" y1="170" x2="420" y2="340" stroke="#16a085" stroke-width="2"/>
+  <line x1="400" y1="170" x2="640" y2="340" stroke="#2c3e50" stroke-width="2"/>
+</svg>

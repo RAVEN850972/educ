@@ -1,6 +1,6 @@
-/* Адаптивные стили для SMTH Token сайта */
+/* Адаптивные стили для SmAIth Learn */
 
-/* Адаптивность для разных экранов */
+/* Большие экраны */
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -11,6 +11,7 @@
     }
 }
 
+/* Средние экраны */
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
@@ -20,8 +21,19 @@
         font-size: 2.5rem;
     }
     
-    .about-grid, .modules-grid {
+    .about-grid, 
+    .modules-grid, 
+    .features-grid, 
+    .why-grid, 
+    .start-buttons {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .security-grid,
+    .advantages-grid,
+    .evaluation-system,
+    .info-cards {
+        grid-template-columns: 1fr;
     }
     
     .section-title {
@@ -29,11 +41,13 @@
     }
 }
 
+/* Планшеты */
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
     }
     
+    /* Мобильное меню */
     .nav-links {
         position: fixed;
         top: 60px;
@@ -48,6 +62,7 @@
         z-index: 99;
         border-bottom: 1px solid var(--border);
         backdrop-filter: blur(10px);
+        display: none;
     }
     
     .nav-links.active {
@@ -59,49 +74,62 @@
         display: block;
     }
     
+    /* Контент и сайдбар */
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .content-sidebar {
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+    /* Герой */
     .hero-title {
         font-size: 2rem;
     }
     
-    .about-grid, .modules-grid {
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    /* Сетки */
+    .about-grid, 
+    .modules-grid, 
+    .features-grid, 
+    .why-grid, 
+    .start-buttons,
+    .token-distribution, 
+    .revenue-distribution {
         grid-template-columns: 1fr;
     }
     
-    .tokenomics-content {
+    /* Процессные шаги */
+    .course-step,
+    .why-item {
         flex-direction: column;
     }
     
-    .tokenomics-visual {
-        margin-top: 30px;
+    .step-number,
+    .why-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
     }
     
-    .roadmap::before {
-        left: 30px;
+    /* Распределение */
+    .distribution-item {
+        flex-direction: column;
+        text-align: center;
     }
     
-    .roadmap-item {
-        justify-content: flex-start;
-    }
-    
-    .roadmap-item-content {
-        width: 80%;
-        margin-left: 50px;
-    }
-    
-    .roadmap-item:nth-child(odd) .roadmap-date,
-    .roadmap-item:nth-child(even) .roadmap-date {
-        left: -70px;
-        width: 90px;
-        text-align: right;
-    }
-    
-    .roadmap-item:nth-child(odd) .roadmap-item-content::before,
-    .roadmap-item:nth-child(even) .roadmap-item-content::before {
-        left: -20px;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .distribution-percentage {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        margin-right: 0;
+        margin-bottom: 15px;
+        padding-right: 0;
+        padding-bottom: 15px;
+        width: auto;
     }
     
     .footer-links {
@@ -110,9 +138,27 @@
     }
 }
 
+/* Мобильные устройства */
 @media (max-width: 576px) {
     .container {
         padding: 0 15px;
+    }
+    
+    .page-header {
+        margin-top: 60px;
+        padding: 20px 0;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .content-subtitle {
+        font-size: 1.5rem;
     }
     
     .hero-content {
@@ -135,64 +181,77 @@
         text-align: center;
     }
     
-    .section-title {
-        font-size: 1.75rem;
+    .security-item,
+    .advantage-item,
+    .evaluation-item,
+    .mechanism-item {
+        flex-direction: column;
     }
     
-    .roadmap-item-content {
-        width: 85%;
-        padding: 20px;
-        margin-left: 40px;
-    }
-    
-    .roadmap-date {
-        font-size: 0.8rem;
-        padding: 3px 10px;
-        left: -60px !important;
-        width: 80px !important;
+    .security-icon,
+    .advantage-icon,
+    .evaluation-icon,
+    .mechanism-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
     }
     
     .section {
         padding: 60px 0;
     }
     
-    .about-card, .module-card {
-        padding: 20px;
+    .self-check, 
+    .info-card,
+    .module-card,
+    .about-card,
+    .feature-card,
+    .analogy-block,
+    .visualization-container {
+        padding: 15px;
     }
     
-    .about-card-title, .module-title {
-        font-size: 1.2rem;
+    .comparison-table th,
+    .comparison-table td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .course-navigation .prev-next-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .prev-link,
+    .next-link {
+        text-align: center;
     }
 }
 
-/* Для очень маленьких экранов */
+/* Очень маленькие мобильные устройства */
 @media (max-width: 360px) {
     .hero-title {
         font-size: 1.5rem;
+    }
+    
+    .logo {
+        font-size: 20px;
     }
     
     .section-title {
         font-size: 1.5rem;
     }
     
-    .roadmap-item-content {
-        width: 80%;
-        padding: 15px;
-        margin-left: 35px;
+    .content-subtitle {
+        font-size: 1.3rem;
     }
     
-    .roadmap-date {
-        font-size: 0.7rem;
-        padding: 2px 8px;
-        left: -50px !important;
-        width: 70px !important;
-    }
-    
-    .roadmap-title {
+    .self-check h3,
+    .sidebar-module h3 {
         font-size: 1.2rem;
     }
     
-    .pre {
-        font-size: 0.6rem;
+    .about-card-title,
+    .module-card h4 {
+        font-size: 1.2rem;
     }
 }

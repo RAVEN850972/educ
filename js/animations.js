@@ -1,5 +1,5 @@
 /**
- * Анимации для сайта SmAIth Token
+ * Анимации для сайта SmAIth Learn
  * Содержит функции для различных анимаций и эффектов интерфейса
  */
 
@@ -54,6 +54,8 @@ function smoothScroll() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Пропускаем якоря без конкретной цели
+            
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
@@ -107,11 +109,43 @@ function setupMobileMenu() {
     }
 }
 
+// Скролл к содержимому в боковой панели
+function setupSidebarLinks() {
+    document.querySelectorAll('.sidebar-toc a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetClass = this.getAttribute('data-scroll');
+            const targetElement = document.querySelector('.' + targetClass);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Инициализация анимаций
+function initAnimations() {
+    animateOnScroll();
+    handleNavbarScroll();
+    smoothScroll();
+    setupMobileMenu();
+    setupSidebarLinks();
+}
+
+// Запуск после загрузки DOM
+document.addEventListener('DOMContentLoaded', initAnimations);
+
 // Экспорт функций
 window.animationManager = {
     animateOnScroll,
     handleNavbarScroll,
     smoothScroll,
-    setupMobileMenu
+    setupMobileMenu,
+    setupSidebarLinks,
+    initAnimations
 };
-

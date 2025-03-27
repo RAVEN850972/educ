@@ -1,764 +1,238 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курс по блокчейну TON</title>
-    
-    <!-- Добавляем диагностический скрипт -->
-    <script>
-        // Отлавливаем и логируем ошибки
-        window.addEventListener('error', function(event) {
-            console.error('Глобальная ошибка:', event.error);
-            // Принудительно удаляем индикатор загрузки
-            const loader = document.querySelector('.page-loading');
-            if (loader) {
-                loader.style.display = 'none';
-            }
-        });
-
-        // Страховка от застревания лоадера
-        window.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                const loader = document.querySelector('.page-loading');
-                if (loader && loader.style.display !== 'none') {
-                    console.warn('Принудительное удаление лоадера');
-                    loader.style.display = 'none';
-                }
-            }, 3000);
-        });
-    </script>
-
+    <title>SmAIth Start - Образовательный портал</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/course.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- Индикатор загрузки страницы -->
-    <div class="page-loading">
-        <div class="loader"></div>
-    </div>
-
     <!-- Навигация -->
     <nav id="navbar">
         <div class="container nav-container">
-            <div class="logo">TON & SmAIth</div>
+            <div class="logo">SMTH Learn</div>
             <div class="nav-links">
-                <a href="#hero" class="nav-link">Главная</a>
-                <a href="#course-content" class="nav-link">О курсе</a>
-                <a href="#course-content" class="nav-link">Модули</a>
-                <a href="#" class="nav-link" id="progress-link">Прогресс</a>
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="blockchain.html" class="nav-link">Блокчейн</a>
+                <a href="ton.html" class="nav-link">TON</a>
+                <a href="smth-token.html" class="nav-link">Токен SMTH</a>
+                <a href="tokenomics.html" class="nav-link">Токеномика</a>
+                <a href="platform.html" class="nav-link">Платформа</a>
+                <a href="quiz.html" class="nav-link">Тесты</a>
             </div>
             <div class="theme-toggle" id="theme-toggle">
                 <span class="theme-toggle-icon">☀️</span>
             </div>
         </div>
     </nav>
-
-    <!-- Герой -->
-    <section class="hero" id="hero">
+    
+    <!-- Секция герой -->
+    <section class="hero">
         <div class="matrix-bg" id="matrix-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Курс по блокчейну <span>TON</span></h1>
-                <p class="hero-description">Углубленное обучение блокчейн-технологиям и экосистеме TON. Получите практические навыки работы с криптовалютами.</p>
-                <a href="#course-content" class="btn btn-primary">Начать курс</a>
-                <a href="#" class="btn" id="continue-btn">Продолжить обучение</a>
+                <h1 class="hero-title">Образовательный портал <span>SmAIth Start</span></h1>
+                <p class="hero-description">Погрузитесь в мир блокчейна, узнайте о возможностях TON и инновационной платформе SmAIth Start для финансирования технологических проектов.</p>
+                <a href="#intro" class="btn btn-primary">Начать обучение</a>
+                <a href="quiz.html" class="btn">Проверить знания</a>
             </div>
         </div>
     </section>
-
-    <!-- Контент курса -->
-    <section class="section course-content" id="course-content">
-        <div class="container" id="course-container">
-            <!-- Прогресс -->
-            <div class="progress-container">
-                <div class="progress-text">Прогресс:</div>
-                <div class="progress-bar">
-                    <div class="certificate-name" id="user-name">Участник курса</div>
-                    <div class="certificate-content">
-                        <p>успешно завершил курс обучения</p>
-                        <h3>"Блокчейн TON и проект SmAIth"</h3>
-                        <p>и теперь готов к участию в экосистеме TON</p>
-                    </div>
-                    <div class="certificate-date" id="certificate-date"></div>
+    
+    <!-- Введение -->
+    <section class="section" id="intro">
+        <div class="container">
+            <h2 class="section-title fade-in">Введение в курс</h2>
+            <p class="fade-in">Добро пожаловать на образовательный портал SmAIth Start! Здесь вы найдете понятное объяснение ключевых концепций блокчейна, технологии TON, токена SMTH и принципов работы децентрализованной платформы для финансирования технологических проектов.</p>
+            
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <h3 class="about-card-title">Блокчейн</h3>
+                    <p>Узнайте основные принципы работы блокчейна простыми словами.</p>
+                    <a href="blockchain.html" class="link">Изучить →</a>
+                </div>
+                <div class="about-card fade-in">
+                    <h3 class="about-card-title">TON</h3>
+                    <p>Погрузитесь в особенности блокчейна The Open Network (TON).</p>
+                    <a href="ton.html" class="link">Изучить →</a>
+                </div>
+                <div class="about-card fade-in">
+                    <h3 class="about-card-title">Токен SMTH</h3>
+                    <p>Изучите модульную архитектуру и принципы работы токена SMTH.</p>
+                    <a href="smth-token.html" class="link">Изучить →</a>
+                </div>
+                <div class="about-card fade-in">
+                    <h3 class="about-card-title">Токеномика</h3>
+                    <p>Поймите экономическую модель и распределение токенов SMTH.</p>
+                    <a href="tokenomics.html" class="link">Изучить →</a>
+                </div>
+                <div class="about-card fade-in">
+                    <h3 class="about-card-title">Платформа</h3>
+                    <p>Разберитесь в процессе работы платформы SmAIth Start.</p>
+                    <a href="platform.html" class="link">Изучить →</a>
+                </div>
+                <div class="about-card fade-in">
+                    <h3 class="about-card-title">Тесты</h3>
+                    <p>Проверьте полученные знания, ответив на вопросы по всем темам.</p>
+                    <a href="quiz.html" class="link">Пройти тесты →</a>
                 </div>
             </div>
-			
-			<!-- Блоки курса -->
-            <div class="course-blocks">
-                <!-- Блок 1: Основы блокчейна -->
-                <div class="block-card" id="block-1">
-                    <div class="block-header" data-block="1">
-                        <h2>
-                            <div class="block-number">1</div>
-                            Основы блокчейна и криптовалют
-                            <span class="completion-badge hidden" id="badge-1">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Выполнено
-                            </span>
-                        </h2>
-                        <div class="block-indicator">▼</div>
-                    </div>
-                    
-                    <!-- Содержимое первого блока -->
-                    <div class="block-content" id="content-1">
-                        <div class="section">
-                            <h3>Что такое блокчейн?</h3>
-                            <p>Блокчейн — это распределенная, децентрализованная и публичная цифровая бухгалтерская книга, которая функционирует без центрального контроля. Ключевые характеристики:</p>
-                            <ul>
-                                <li><strong>Распределенность</strong>: Данные хранятся одновременно на множестве компьютеров</li>
-                                <li><strong>Прозрачность</strong>: Все транзакции видны всем участникам сети</li>
-                                <li><strong>Безопасность</strong>: Криптографическая защита от подделки и изменения данных</li>
-                                <li><strong>Необратимость</strong>: Невозможность отмены подтвержденной транзакции</li>
-                            </ul>
-                        </div>
-
-                        <div class="section">
-                            <h3>Принцип работы блокчейна</h3>
-                            <p>Блокчейн состоит из цепочки блоков, где каждый блок содержит:</p>
-                            <ol>
-                                <li>Данные о транзакциях</li>
-                                <li>Метку времени</li>
-                                <li>Криптографический хеш предыдущего блока</li>
-                                <li>Собственный уникальный хеш</li>
-                            </ol>
-                            <p>При попытке изменить информацию в блоке, изменятся все последующие блоки, что делает систему практически взломостойкой.</p>
-                            
-                            <div class="info-box">
-                                <h4>Почему это важно?</h4>
-                                <p>Блокчейн позволяет создать систему, в которой никто не может изменить данные незаметно. Это делает его идеальным для финансовых транзакций, голосований, ведения реестров и многих других применений, где важна неизменность и прозрачность.</p>
-                            </div>
-                        </div>
-
-                        <div class="test-container">
-                            <div class="question">
-                                <p>1. Что является основным преимуществом децентрализации в блокчейне?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Повышение скорости транзакций</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Отсутствие центрального контроля и риска манипуляций</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Снижение стоимости транзакций</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>2. Какой элемент обеспечивает целостность блокчейна?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Пароль администратора</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Криптографический хеш</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Количество майнеров</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>3. Что происходит при попытке изменения данных в блоке?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Изменяются все последующие блоки, что делает манипуляцию очевидной</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Блок автоматически удаляется</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Изменения легко проходят без последствий</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="test-result" id="result-1"></div>
-                        </div>
-
-                        <div class="navigation-buttons">
-                            <button class="btn check-answers" data-block="1">Проверить ответы</button>
-                            <button class="btn next-block" id="next-1" disabled data-next="2">Следующий блок</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Блок 2: TON Блокчейн -->
-                <div class="block-card" id="block-2">
-                    <div class="block-header" data-block="2">
-                        <h2>
-                            <div class="block-number">2</div>
-                            Блокчейн TON
-                            <span class="completion-badge hidden" id="badge-2">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Выполнено
-                            </span>
-                        </h2>
-                        <div class="block-indicator">▼</div>
-                    </div>
-                    
-                    <div class="block-content hidden" id="content-2">
-                        <div class="section">
-                            <h3>TON (The Open Network)</h3>
-                            <p>TON — это блокчейн третьего поколения, созданный для обработки миллионов транзакций в секунду с минимальными комиссиями.</p>
-                            
-                            <h4>Ключевые особенности TON:</h4>
-                            <ul>
-                                <li><strong>Мультичейн архитектура</strong>: Включает мастерчейн и воркчейны, что обеспечивает высокую масштабируемость</li>
-                                <li><strong>Скорость обработки</strong>: До миллионов транзакций в секунду (TPS)</li>
-                                <li><strong>Низкие комиссии</strong>: В сравнении с другими популярными блокчейнами</li>
-                                <li><strong>Смарт-контракты</strong>: Поддержка гибких и безопасных смарт-контрактов на языке FunC</li>
-                            </ul>
-                        </div>
-
-                        <div class="section">
-                            <h3>Toncoin: Нативная валюта сети TON</h3>
-                            <p>Toncoin (TON) служит основной валютой в экосистеме TON и используется для:</p>
-                            <ul>
-                                <li>Оплаты комиссий за транзакции</li>
-                                <li>Вознаграждения валидаторов</li>
-                                <li>Взаимодействия со смарт-контрактами</li>
-                                <li>Участия в голосованиях по управлению сетью</li>
-                            </ul>
-                            <p>Владелец TON может хранить монеты в любом кошельке, поддерживающем блокчейн TON, например, в Tonkeeper или Tonhub.</p>
-                            
-                            <div class="info-box">
-                                <h4>Интересный факт</h4>
-                                <p>TON изначально был разработан компанией Telegram, но сейчас развивается как независимый проект с открытым исходным кодом.</p>
-                            </div>
-                        </div>
-
-                        <div class="test-container">
-                            <div class="question">
-                                <p>1. Какова основная особенность TON?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Низкая скорость транзакций</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Высокая масштабируемость</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Отсутствие смарт-контрактов</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>2. Для чего используется Toncoin в блокчейне TON?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Только для покупки товаров в интернете</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Для оплаты комиссий и взаимодействия с сетью</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Только для коллекционирования</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>3. Что такое мультичейн архитектура в TON?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Возможность подключаться к нескольким интернет-провайдерам</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Система из мастерчейна и множества воркчейнов для масштабирования</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Поддержка нескольких криптовалют одновременно</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="test-result" id="result-2"></div>
-                        </div>
-
-                        <div class="navigation-buttons">
-                            <button class="btn check-answers" data-block="2">Проверить ответы</button>
-                            <button class="btn prev-block" data-prev="1">Предыдущий блок</button>
-                            <button class="btn next-block" id="next-2" disabled data-next="3">Следующий блок</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Блок 3: Токеномика SMTH -->
-                <div class="block-card" id="block-3">
-                    <div class="block-header" data-block="3">
-                        <h2>
-                            <div class="block-number">3</div>
-                            Токеномика SMTH
-                            <span class="completion-badge hidden" id="badge-3">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Выполнено
-                            </span>
-                        </h2>
-                        <div class="block-indicator">▼</div>
-                    </div>
-                    
-                    <div class="block-content hidden" id="content-3">
-                        <div class="section">
-                            <h3>Токен SMTH</h3>
-                            <p>Токен SMTH — это цифровой актив проекта SmAIth, работающий на блокчейне TON. Токен SMTH выполняет несколько важных функций в экосистеме:</p>
-                            
-                            <ul>
-                                <li><strong>Управление</strong>: Держатели токенов участвуют в голосованиях по развитию проекта</li>
-                                <li><strong>Доступ к сервисам</strong>: Токены открывают доступ к премиальным функциям экосистемы SmAIth</li>
-                                <li><strong>Вознаграждения</strong>: Пользователи получают токены за вклад в развитие проекта</li>
-                                <li><strong>Инвестиционный инструмент</strong>: Потенциальная возможность роста стоимости токена</li>
-                            </ul>
-                        </div>
-
-                        <div class="section">
-                            <h3>Токеномика проекта</h3>
-                            <p>Общее предложение SMTH составляет 1,000,000,000 (один миллиард) токенов, распределенных следующим образом:</p>
-                            
-                            <div class="distribution-item">
-                                <div class="distribution-label">
-                                    <span>Основная продажа</span>
-                                    <span>25%</span>
-                                </div>
-                                <div class="distribution-bar">
-                                    <div class="distribution-fill" style="--width: 25%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="distribution-item">
-                                <div class="distribution-label">
-                                    <span>Команда и консультанты</span>
-                                    <span>20%</span>
-                                </div>
-                                <div class="distribution-bar">
-                                    <div class="distribution-fill" style="--width: 20%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="distribution-item">
-                                <div class="distribution-label">
-                                    <span>Резерв экосистемы</span>
-                                    <span>30%</span>
-                                </div>
-                                <div class="distribution-bar">
-                                    <div class="distribution-fill" style="--width: 30%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="distribution-item">
-                                <div class="distribution-label">
-                                    <span>Маркетинг и партнерства</span>
-                                    <span>15%</span>
-                                </div>
-                                <div class="distribution-bar">
-                                    <div class="distribution-fill" style="--width: 15%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="distribution-item">
-                                <div class="distribution-label">
-                                    <span>Стратегический резерв</span>
-                                    <span>10%</span>
-                                </div>
-                                <div class="distribution-bar">
-                                    <div class="distribution-fill" style="--width: 10%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="info-box">
-                                <h4>Важно понимать</h4>
-                                <p>Распределение токенов влияет на экономику проекта. Например, большой процент токенов у команды может означать высокий уровень контроля, а токены в резерве экосистемы обеспечивают возможности для будущего развития.</p>
-                            </div>
-                        </div>
-
-                        <div class="test-container">
-                            <div class="question">
-                                <p>1. Какую роль играют токены SMTH в управлении проектом?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Никакую, управлением занимается только команда</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Полностью заменяют команду разработчиков</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Позволяют держателям участвовать в голосованиях</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>2. Какая доля токенов выделена на резерв экосистемы?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) 20%</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) 30%</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) 25%</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>3. Для чего можно использовать токены SMTH?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Только для оплаты товаров</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Для доступа к сервисам и участия в управлении</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Только как коллекционный предмет</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="test-result" id="result-3"></div>
-                        </div>
-
-                        <div class="navigation-buttons">
-                            <button class="btn check-answers" data-block="3">Проверить ответы</button>
-                            <button class="btn prev-block" data-prev="2">Предыдущий блок</button>
-                            <button class="btn next-block" id="next-3" disabled data-next="4">Следующий блок</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Блок 4: Кошельки TON (новый блок) -->
-                <div class="block-card" id="block-4">
-                    <div class="block-header" data-block="4">
-                        <h2>
-                            <div class="block-number">4</div>
-                            Кошельки и работа с TON
-                            <span class="completion-badge hidden" id="badge-4">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Выполнено
-                            </span>
-                        </h2>
-                        <div class="block-indicator">▼</div>
-                    </div>
-                    
-                    <div class="block-content hidden" id="content-4">
-                        <div class="section">
-                            <h3>Кошельки в экосистеме TON</h3>
-                            <p>Кошелек — это программа или устройство, которое хранит ваши приватные ключи и позволяет управлять вашими криптоактивами.</p>
-                            
-                            <h4>Популярные кошельки TON:</h4>
-                            <ul>
-                                <li><strong>Tonkeeper</strong>: Мобильный и веб-кошелек с интуитивным интерфейсом</li>
-                                <li><strong>Tonhub</strong>: Мобильный кошелек с поддержкой дополнительных функций</li>
-                                <li><strong>Chrome Extension</strong>: Расширение для браузера</li>
-                                <li><strong>Telegram Wallet</strong>: Встроенный в мессенджер Telegram функционал кошелька</li>
-                            </ul>
-                            
-                            <h4>Как создать кошелек:</h4>
-                            <ol>
-                                <li>Выберите приложение кошелька и установите его</li>
-                                <li>Создайте новый кошелек, следуя инструкциям приложения</li>
-                                <li>Запишите и надежно сохраните секретную фразу (24 слова)</li>
-                                <li>Установите пин-код или биометрическую защиту</li>
-                            </ol>
-                            
-                            <div class="info-box warning">
-                                <h4>Важно!</h4>
-                                <p>Никогда не делитесь своей секретной фразой с кем-либо. Тот, кто имеет доступ к этой фразе, может получить полный контроль над вашими активами.</p>
-                            </div>
-                        </div>
-
-                        <div class="section">
-                            <h3>Транзакции в сети TON</h3>
-                            <p>Транзакция — это операция, которая записывается в блокчейн. Основные типы транзакций:</p>
-                            
-                            <ul>
-                                <li><strong>Перевод токенов</strong>: Отправка криптовалюты с одного адреса на другой</li>
-                                <li><strong>Вызов смарт-контракта</strong>: Взаимодействие с программным кодом в блокчейне</li>
-                                <li><strong>Развертывание смарт-контракта</strong>: Загрузка нового кода в блокчейн</li>
-                                <li><strong>Обновление метаданных</strong>: Изменение информации в блокчейне</li>
-                            </ul>
-                            
-                            <p>Для совершения транзакции в сети TON необходимо:</p>
-                            <ol>
-                                <li>Иметь кошелек с положительным балансом TON</li>
-                                <li>Указать адрес получателя (64 символа, начинается с "EQ" или "UQ")</li>
-                                <li>Указать сумму перевода</li>
-                                <li>Подтвердить транзакцию (обычно вводом PIN-кода или с помощью биометрии)</li>
-                            </ol>
-                        </div>
-
-                        <div class="test-container">
-                            <div class="question">
-                                <p>1. Что такое секретная фраза (сид-фраза) кошелька?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Логин для входа в кошелек</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Набор слов, дающий полный доступ к средствам</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Пароль для защиты приложения</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>2. Что требуется для совершения транзакции в TON?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Только знать адрес получателя</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Иметь кошелек с положительным балансом и адрес получателя</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Разрешение от банка</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>3. С чего обычно начинается адрес кошелька TON?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) С букв "BTC" или "ETH"</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) С букв "EQ" или "UQ"</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) С цифр "0x"</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="test-result" id="result-4"></div>
-                        </div>
-
-                        <div class="navigation-buttons">
-                            <button class="btn check-answers" data-block="4">Проверить ответы</button>
-                            <button class="btn prev-block" data-prev="3">Предыдущий блок</button>
-                            <button class="btn next-block" id="next-4" disabled data-next="5">Следующий блок</button>
-                        </div>
-						
-						<!-- Блок 5: Безопасность в криптомире (новый блок) -->
-                <div class="block-card" id="block-5">
-                    <div class="block-header" data-block="5">
-                        <h2>
-                            <div class="block-number">5</div>
-                            Безопасность в криптомире
-                            <span class="completion-badge hidden" id="badge-5">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Выполнено
-                            </span>
-                        </h2>
-                        <div class="block-indicator">▼</div>
-                    </div>
-                    
-                    <div class="block-content hidden" id="content-5">
-                        <div class="section">
-                            <h3>Основные принципы безопасности</h3>
-                            <p>При работе с криптовалютами крайне важно соблюдать следующие правила безопасности:</p>
-                            
-                            <ul>
-                                <li><strong>Сохранение секретной фразы</strong>: Запишите фразу на бумаге и храните в надежном месте, не в цифровом виде</li>
-                                <li><strong>Двухфакторная аутентификация (2FA)</strong>: Используйте 2FA везде, где это возможно</li>
-                                <li><strong>Проверка адресов</strong>: Всегда дважды проверяйте адрес получателя перед отправкой средств</li>
-                                <li><strong>Обновление ПО</strong>: Поддерживайте все приложения и устройства в актуальном состоянии</li>
-                                <li><strong>Использование холодных кошельков</strong>: Для хранения крупных сумм используйте аппаратные кошельки</li>
-                            </ul>
-                            
-                            <div class="info-box warning">
-                                <h4>Внимание: Распространенные схемы мошенничества</h4>
-                                <ul>
-                                    <li><strong>Фишинг</strong>: Поддельные сайты и приложения, имитирующие официальные ресурсы</li>
-                                    <li><strong>Скам-проекты</strong>: Фальшивые инвестиционные возможности с обещанием высокой доходности</li>
-                                    <li><strong>Подмена адресов</strong>: Вредоносное ПО, которое меняет адрес получателя при копировании</li>
-                                    <li><strong>Социальная инженерия</strong>: Манипуляция пользователями для получения их личных данных</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="section">
-                            <h3>Советы по безопасности для новичков</h3>
-                            <ol>
-                                <li>Начинайте с малых сумм, чтобы освоиться с интерфейсами и процессами</li>
-                                <li>Используйте только официальные приложения и проверенные сервисы</li>
-                                <li>Не делитесь информацией о ваших инвестициях и балансах публично</li>
-                                <li>Помните, что транзакции в блокчейне необратимы — отменить или вернуть перевод невозможно</li>
-                                <li>Не переходите по подозрительным ссылкам и не скачивайте непроверенные файлы</li>
-                            </ol>
-                            
-                            <p>Придерживаясь этих простых правил, вы значительно снизите риск потери своих криптоактивов.</p>
-                        </div>
-
-                        <div class="test-container">
-                            <div class="question">
-                                <p>1. Как следует хранить секретную фразу от кошелька?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Сохранить в заметках телефона для быстрого доступа</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Записать на бумаге и хранить в надежном месте</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Поделиться с друзьями для дополнительной сохранности</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>2. Что такое фишинг в контексте криптовалют?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Метод добычи криптовалюты</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Создание поддельных сайтов для кражи данных пользователей</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Официальный способ восстановления доступа к кошельку</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <p>3. Возможно ли отменить транзакцию в блокчейне после ее подтверждения?</p>
-                                <div class="options">
-                                    <div class="option" data-value="A">
-                                        <div class="radio"></div>
-                                        <span>A) Нет, подтвержденные транзакции необратимы</span>
-                                    </div>
-                                    <div class="option" data-value="B">
-                                        <div class="radio"></div>
-                                        <span>B) Да, через службу поддержки</span>
-                                    </div>
-                                    <div class="option" data-value="C">
-                                        <div class="radio"></div>
-                                        <span>C) Да, если отправить специальный запрос</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="test-result" id="result-5"></div>
-                        </div>
-
-                        <div class="navigation-buttons">
-                            <button class="btn check-answers" data-block="5">Проверить ответы</button>
-                            <button class="btn prev-block" data-prev="4">Предыдущий блок</button>
-                            <button class="btn finish-course" id="finish-course" disabled>Завершить курс</button>
-                        </div>
-                    </div>
-                </div>
-						
-                    </div>
-                </div>
-			
         </div>
     </section>
-	
-	<!-- Сертификат -->
-                <div class="certificate hidden" id="certificate">
-                    <div class="certificate-icon">
-                        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="2"/>
-                            <path d="M8 12L11 15L16 9" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+    
+    <!-- Почему это важно -->
+    <section class="section" id="why">
+        <div class="container">
+            <h2 class="section-title fade-in">Почему это важно?</h2>
+            <div class="why-content fade-in">
+                <p>В современном мире технологические инновации часто сталкиваются с барьерами финансирования и развития. Традиционные инвестиционные модели имеют высокий порог входа, недостаточную прозрачность и ограниченный доступ к капиталу для многообещающих проектов.</p>
+                
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon">💡</div>
+                        <div class="why-text">
+                            <h3>Демократизация инноваций</h3>
+                            <p>SmAIth Start делает инвестиции в высокотехнологичные проекты доступными для всех.</p>
+                        </div>
                     </div>
-                    <h2>Сертификат об окончании курса</h2>
-                    <p>Настоящим удостоверяется, что</p>
-                    <div class="
-                <div class="progress-text" id="progress-percent">0%</div>
+                    
+                    <div class="why-item">
+                        <div class="why-icon">🔍</div>
+                        <div class="why-text">
+                            <h3>Прозрачность процессов</h3>
+                            <p>Блокчейн TON обеспечивает полную прозрачность финансирования и развития проектов.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-icon">🔄</div>
+                        <div class="why-text">
+                            <h3>Децентрализованное управление</h3>
+                            <p>Сообщество принимает ключевые решения по развитию проектов через DAO.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-icon">🛡️</div>
+                        <div class="why-text">
+                            <h3>Защита инвесторов</h3>
+                            <p>Поэтапное финансирование минимизирует риски и обеспечивает контроль за развитием проектов.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
+        </div>
+    </section>
+    
+    <!-- Как устроен курс -->
+    <section class="section" id="course">
+        <div class="container">
+            <h2 class="section-title fade-in">Как устроен курс</h2>
+            <div class="course-content fade-in">
+                <p>Наш образовательный портал построен на принципах простоты, наглядности и практичности. Каждая тема раскрывается через понятные объяснения, визуализации и практические примеры.</p>
+                
+                <div class="course-steps">
+                    <div class="course-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Изучение теории</h3>
+                            <p>Каждый раздел содержит теоретический материал, объясненный простым языком без технического жаргона.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Визуальные схемы</h3>
+                            <p>Наглядные диаграммы и визуализации помогают быстрее понять сложные концепции.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Практические примеры</h3>
+                            <p>Реальные сценарии использования и примеры показывают, как технология работает на практике.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Тесты для закрепления</h3>
+                            <p>После изучения каждой темы вы можете проверить свои знания с помощью интерактивных тестов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Приступите к обучению -->
+    <section class="section" id="start">
+        <div class="container">
+            <h2 class="section-title fade-in">Приступите к обучению</h2>
+            <div class="start-content fade-in">
+                <p>Готовы погрузиться в мир инновационных технологий? Выберите тему и начните обучение прямо сейчас!</p>
+                
+                <div class="start-buttons">
+                    <a href="blockchain.html" class="start-button">
+                        <div class="start-icon">🔗</div>
+                        <div class="start-text">Блокчейн</div>
+                    </a>
+                    
+                    <a href="ton.html" class="start-button">
+                        <div class="start-icon">📱</div>
+                        <div class="start-text">TON</div>
+                    </a>
+                    
+                    <a href="smth-token.html" class="start-button">
+                        <div class="start-icon">🪙</div>
+                        <div class="start-text">Токен SMTH</div>
+                    </a>
+                    
+                    <a href="tokenomics.html" class="start-button">
+                        <div class="start-icon">📊</div>
+                        <div class="start-text">Токеномика</div>
+                    </a>
+                    
+                    <a href="platform.html" class="start-button">
+                        <div class="start-icon">🚀</div>
+                        <div class="start-text">Платформа</div>
+                    </a>
+                </div>
+                
+                <div class="start-quiz">
+                    <a href="quiz.html" class="btn btn-primary">Перейти к тестам</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Футер -->
     <footer>
         <div class="container">
-            <div class="footer-logo">TON & SmAIth</div>
-            <p>Образовательный курс по блокчейн-технологиям</p>
+            <div class="footer-logo">SMTH Learn</div>
+            <p>Образовательный портал о блокчейне, TON и SmAIth Start</p>
             
             <div class="footer-links">
-                <a href="#hero" class="footer-link">Главная</a>
-                <a href="#course-content" class="footer-link">О курсе</a>
-                <a href="#" class="footer-link" id="privacy-link">Конфиденциальность</a>
+                <a href="index.html" class="footer-link">Главная</a>
+                <a href="blockchain.html" class="footer-link">Блокчейн</a>
+                <a href="ton.html" class="footer-link">TON</a>
+                <a href="smth-token.html" class="footer-link">Токен SMTH</a>
+                <a href="tokenomics.html" class="footer-link">Токеномика</a>
+                <a href="platform.html" class="footer-link">Платформа</a>
+                <a href="quiz.html" class="footer-link">Тесты</a>
             </div>
             
-            <p class="footer-copyright">© 2025 SmAIth. Все права защищены.</p>
+            <p class="footer-copyright">© 2025 SmAIth Learn. Все права защищены.</p>
         </div>
     </footer>
-	
+
+    <!-- Скрипты -->
     <script src="js/theme.js"></script>
-    <script src="js/matrix.js"></script>
     <script src="js/animations.js"></script>
-    <script src="js/course.js"></script>
-	
+    <script src="js/main.js"></script>
 </body>
 </html>
-
-                
-
-                
-
-            

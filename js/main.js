@@ -1,110 +1,131 @@
 /**
- * Основной JavaScript файл для сайта SmAIth Token
+ * Основной JavaScript файл для сайта SmAIth Learn
  * Координирует инициализацию всех компонентов
  */
 
-function removeLoadingIndicator() {
-    const pageLoading = document.querySelector('.page-loading');
-    if (pageLoading) {
-        // Добавляем классы для анимации исчезновения
-        pageLoading.classList.add('hide');
-        
-        // Принудительное удаление через небольшой таймаут
-        setTimeout(() => {
-            pageLoading.remove(); // Полное удаление элемента из DOM
-        }, 600);
+// Инициализация эффекта матрицы для главной страницы
+function initMatrix() {
+    const matrixBg = document.getElementById('matrix-bg');
+    if (!matrixBg) return; // Выходим, если элемент не найден
+    
+    // Создаем Canvas для матричного эффекта
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    matrixBg.appendChild(canvas);
+    
+    // Устанавливаем размеры Canvas
+    function setCanvasSize() {
+        canvas.width = matrixBg.offsetWidth;
+        canvas.height = matrixBg.offsetHeight;
     }
+    
+    // Вызываем при загрузке и изменении размера окна
+    setCanvasSize();
+    window.addEventListener('resize', setCanvasSize);
+    
+    // Символы для матрицы (цифры, специальные символы и буквы разных алфавитов)
+    const chars = '01010101SmAIthSTART{}[]<>/*-+?!&#%$@0101';
+    
+    // Размер символов и количество колонок
+    const fontSize = 14;
+    const columns = Math.floor(canvas.width / fontSize);
+    
+    // Инициализируем положение первого символа в каждой колонке
+    const drops = [];
+    for (let i = 0; i < columns; i++) {
+        drops[i] = Math.floor(Math.random() * canvas.height / fontSize) * -1;
+    }
+    
+    // Цвет символов (в зависимости от темы)
+    function getColor() {
+        return document.body.classList.contains('dark-theme') 
+            ? 'rgba(255, 255, 255, 0.07)' 
+            : 'rgba(0, 0, 0, 0.03)';
+    }
+    
+    // Функция отрисовки
+    function draw() {
+        // Очищаем Canvas
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.01)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        ctx.fillStyle = getColor();
+        ctx.font = fontSize + 'px monospace';
+        
+        // Рисуем символы
+        for (let i = 0; i < drops.length; i++) {
+            // Выбираем случайный символ
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            
+            // Рисуем символ
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+            
+            // Двигаем символ вниз или сбрасываем в начало, если он достиг конца экрана
+            drops[i]++;
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+        }
+    }
+    
+    // Запускаем анимацию
+    setInterval(draw, 60);
+    
+    // При изменении темы обновляем цвет
+    window.addEventListener('themechange', () => {
+        ctx.fillStyle = getColor();
+    });
+}
+
+// Обработка смены темы для матрицы
+function handleThemeChange() {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+    
+    themeToggle.addEventListener('click', () => {
+        // Создаем кастомное событие смены темы
+        const event = new Event('themechange');
+        window.dispatchEvent(event);
+    });
+}
+
+// Обработка активной ссылки в навигации
+function highlightCurrentNavLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (currentPath.endsWith(linkPath) || 
+            (currentPath.endsWith('/') && linkPath === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
 }
 
 // Инициализация всех функций при загрузке DOM
 document.addEventListener('DOMContentLoaded', () => {
-    // Попытка удаления индикатора загрузки несколькими способами
-    removeLoadingIndicator();
-
-    // Дополнительный обработчик в случае задержки
-    setTimeout(removeLoadingIndicator, 100);
+    // Проверяем, загружены ли все необходимые скрипты
+    if (window.themeManager) {
+        window.themeManager.initTheme();
+    }
     
-    // Загрузка составляющих сайта по порядку
-    initTheme();
+    if (window.animationManager) {
+        window.animationManager.initAnimations();
+    }
+    
+    // Инициализируем дополнительные функции
     initMatrix();
-    initAnimations();
-    initTokenomics();
+    handleThemeChange();
+    highlightCurrentNavLink();
     
-    // Слушатели для жизненного цикла страницы
-    window.addEventListener('load', () => {
-        removeLoadingIndicator();
-        onFullLoad();
-    });
+    console.log('SmAIth Learn site initialized successfully');
 });
 
-// Инициализация темы и предпочтений
-function initTheme() {
-    if (window.themeManager) {
-        window.themeManager.setupThemeToggle();
-        window.themeManager.checkUserPreferences();
-    } else {
-        console.error('Theme manager not found');
+// Функция для создания и скачивания PDF (заглушка)
+document.addEventListener('click', (e) => {
+    if (e.target.id === 'download-pdf') {
+        e.preventDefault();
+        alert('Функция скачивания PDF будет доступна в ближайшее время!');
     }
-}
-
-// Инициализация матричного фона
-function initMatrix() {
-    if (window.matrixBackground) {
-        window.matrixBackground.create();
-        window.matrixBackground.handleResize();
-    } else {
-        console.error('Matrix background manager not found');
-    }
-}
-
-// Инициализация анимаций и UI взаимодействий
-function initAnimations() {
-    if (window.animationManager) {
-        window.animationManager.animateOnScroll();
-        window.animationManager.handleNavbarScroll();
-        window.animationManager.smoothScroll();
-        window.animationManager.setupMobileMenu();
-    } else {
-        console.error('Animation manager not found');
-    }
-}
-
-// Инициализация специфических скриптов для секции токеномики
-function initTokenomics() {
-    // Задержка для анимации прогресс-баров, чтобы они появлялись после загрузки страницы
-    setTimeout(() => {
-        const distributionItems = document.querySelectorAll('.distribution-bar');
-        distributionItems.forEach(item => {
-            item.classList.add('animate');
-        });
-    }, 1000);
-}
-
-// Обработчик полной загрузки страницы (включая все ресурсы)
-function onFullLoad() {
-    // Прекэширование ресурсов и оптимизация
-    document.body.classList.add('loaded');
-    
-    // Устанавливаем одноразовый таймер для проверки скорости загрузки
-    setTimeout(() => {
-        // Проверяем, насколько быстро пользователь прокрутил страницу
-        const scrollPercentage = (window.scrollY / 
-            (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            
-        // Собираем минимальную аналитику о пользовательском опыте
-        if (scrollPercentage > 30) {
-            console.log('User is engaged, scrolled over 30% in the first 5 seconds');
-        }
-    }, 5000);
-}
-
-// Обработчик выгрузки страницы
-function onBeforeUnload() {
-    // Сохранение любых пользовательских настроек или состояний
-    // Очистка ресурсов, если необходимо
-}
-
-// Добавляем принудительную инициализацию при полной загрузке
-window.addEventListener('load', () => {
-    removeLoadingIndicator();
 });

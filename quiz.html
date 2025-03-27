@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тесты | SmAIth Start</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">SMTH Learn</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="blockchain.html" class="nav-link">Блокчейн</a>
+                <a href="ton.html" class="nav-link">TON</a>
+                <a href="smth-token.html" class="nav-link">Токен SMTH</a>
+                <a href="tokenomics.html" class="nav-link">Токеномика</a>
+                <a href="platform.html" class="nav-link">Платформа</a>
+                <a href="quiz.html" class="nav-link active">Тесты</a>
+            </div>
+            <div class="theme-toggle" id="theme-toggle">
+                <span class="theme-toggle-icon">☀️</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Тесты</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> / <span>Тесты</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Основное содержимое -->
+    <section class="section">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Блок с основной информацией -->
+                <div class="content-main">
+                    <h2 class="section-title fade-in">Проверьте свои знания</h2>
+                    
+                    <div class="text-block fade-in">
+                        <p>Пройдите тесты по каждой теме, чтобы проверить уровень усвоения материала. Выберите правильный ответ из предложенных вариантов и получите мгновенную обратную связь. В конце каждого теста вы увидите свой результат и рекомендации по дальнейшему изучению.</p>
+                    </div>
+                    
+                    <!-- Выбор темы для теста -->
+                    <div class="quiz-topics fade-in">
+                        <h3>Выберите тему:</h3>
+                        <div class="topics-grid">
+                            <a href="#blockchain" class="topic-card" data-topic="blockchain">
+                                <div class="topic-icon">🔗</div>
+                                <h4>Блокчейн</h4>
+                                <p>5 вопросов</p>
+                            </a>
+                            
+                            <a href="#ton" class="topic-card" data-topic="ton">
+                                <div class="topic-icon">📱</div>
+                                <h4>Блокчейн TON</h4>
+                                <p>5 вопросов</p>
+                            </a>
+                            
+                            <a href="#smth-token" class="topic-card" data-topic="smth-token">
+                                <div class="topic-icon">🪙</div>
+                                <h4>Токен SMTH</h4>
+                                <p>5 вопросов</p>
+                            </a>
+                            
+                            <a href="#tokenomics" class="topic-card" data-topic="tokenomics">
+                                <div class="topic-icon">📊</div>
+                                <h4>Токеномика</h4>
+                                <p>5 вопросов</p>
+                            </a>
+                            
+                            <a href="#platform" class="topic-card" data-topic="platform">
+                                <div class="topic-icon">🚀</div>
+                                <h4>Платформа</h4>
+                                <p>5 вопросов</p>
+                            </a>
+                            
+                            <a href="#all" class="topic-card full-width" data-topic="all">
+                                <div class="topic-icon">🎓</div>
+                                <h4>Полный тест по всем темам</h4>
+                                <p>10 вопросов</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Тест по блокчейну -->
+                    <div id="blockchain" class="quiz-container fade-in">
+                        <h3 class="quiz-title">Тест: Блокчейн</h3>
+                        
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-text">Вопрос <span class="current-question">1</span> из <span class="total-questions">5</span></div>
+                        </div>
+                        
+                        <div class="quiz-questions">
+                            <!-- Вопрос 1 -->
+                            <div class="quiz-question active" data-question="1">
+                                <h4>Что такое блокчейн простыми словами?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="bc-q1-a1" name="bc-q1">
+                                        <label for="bc-q1-a1">Цифровая система учета, доступная всем участникам сети одновременно</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q1-a2" name="bc-q1">
+                                        <label for="bc-q1-a2">Закрытая база данных, управляемая центральной организацией</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q1-a3" name="bc-q1">
+                                        <label for="bc-q1-a3">Банковская система для хранения криптовалют</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q1-a4" name="bc-q1">
+                                        <label for="bc-q1-a4">Программа для майнинга биткоинов</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Верно! Блокчейн — это распределенная цифровая система учета, где информация хранится не в одном месте, а одновременно на тысячах компьютеров участников сети.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. Блокчейн — это распределенная цифровая система учета, где информация хранится не в одном месте, а одновременно на тысячах компьютеров участников сети.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 2 -->
+                            <div class="quiz-question" data-question="2">
+                                <h4>Какие главные преимущества блокчейна по сравнению с обычными базами данных?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q2-a1" name="bc-q2">
+                                        <label for="bc-q2-a1">Дешевизна и простота использования</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q2-a2" name="bc-q2">
+                                        <label for="bc-q2-a2">Большая скорость обработки данных</label>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="bc-q2-a3" name="bc-q2">
+                                        <label for="bc-q2-a3">Отсутствие необходимости доверять центральной организации, защита от подделки данных</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q2-a4" name="bc-q2">
+                                        <label for="bc-q2-a4">Ограниченный доступ к данным только для избранных участников</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Правильно! Основные преимущества: отсутствие необходимости доверять центральному органу, защита от подделки данных, прозрачность и устойчивость к техническим сбоям.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. Основные преимущества блокчейна: отсутствие необходимости доверять центральному органу, защита от подделки данных, прозрачность и устойчивость к техническим сбоям.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 3 -->
+                            <div class="quiz-question" data-question="3">
+                                <h4>Что происходит, когда вы делаете транзакцию в блокчейне?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q3-a1" name="bc-q3">
+                                        <label for="bc-q3-a1">Она мгновенно записывается в базу данных центрального сервера</label>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="bc-q3-a2" name="bc-q3">
+                                        <label for="bc-q3-a2">Транзакция объединяется с другими в блок, который после проверки добавляется к цепочке</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q3-a3" name="bc-q3">
+                                        <label for="bc-q3-a3">Транзакция немедленно отправляется всем участникам сети для одобрения</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q3-a4" name="bc-q3">
+                                        <label for="bc-q3-a4">Она проверяется банком и только потом добавляется в блокчейн</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Верно! Ваш запрос сначала проверяется на корректность, затем объединяется с другими недавними транзакциями в "блок", который после проверки добавляется к цепочке предыдущих блоков.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. При выполнении транзакции в блокчейне, запрос сначала проверяется на корректность, затем объединяется с другими недавними транзакциями в "блок", который после проверки добавляется к цепочке.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 4 -->
+                            <div class="quiz-question" data-question="4">
+                                <h4>Кто проверяет правильность транзакций в блокчейне?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q4-a1" name="bc-q4">
+                                        <label for="bc-q4-a1">Только создатели блокчейна</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q4-a2" name="bc-q4">
+                                        <label for="bc-q4-a2">Банки и финансовые учреждения</label>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="bc-q4-a3" name="bc-q4">
+                                        <label for="bc-q4-a3">Майнеры или валидаторы в зависимости от типа блокчейна</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q4-a4" name="bc-q4">
+                                        <label for="bc-q4-a4">Автоматическая система без участия людей</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Правильно! В блокчейнах типа Bitcoin используются майнеры (Proof-of-Work), а в блокчейнах типа TON — валидаторы (Proof-of-Stake).</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. Правильность транзакций проверяют майнеры в системах типа Bitcoin (с механизмом Proof-of-Work) или валидаторы в системах типа TON (с механизмом Proof-of-Stake).</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 5 -->
+                            <div class="quiz-question" data-question="5">
+                                <h4>Почему практически невозможно изменить информацию, уже записанную в блокчейн?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q5-a1" name="bc-q5">
+                                        <label for="bc-q5-a1">Потому что блокчейн защищен надежными паролями</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q5-a2" name="bc-q5">
+                                        <label for="bc-q5-a2">Потому что разработчики блокчейна запрещают изменения</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="bc-q5-a3" name="bc-q5">
+                                        <label for="bc-q5-a3">Потому что записи в блокчейне зашифрованы</label>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="bc-q5-a4" name="bc-q5">
+                                        <label for="bc-q5-a4">Потому что каждый блок связан с предыдущим, и копии цепочки хранятся на множестве компьютеров</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Верно! Чтобы изменить информацию, нужно изменить не только конкретный блок, но и все последующие, причем сразу на большинстве компьютеров в сети, что практически невыполнимо.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. Для изменения информации в блокчейне нужно изменить не только конкретный блок, но и все последующие блоки, причем сразу на большинстве компьютеров в сети, что практически невыполнимо.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-results">
+                                <h3>Результаты теста</h3>
+                                <div class="results-score">
+                                    <p>Вы ответили правильно на <span class="score">0</span> из <span class="total">5</span> вопросов.</p>
+                                </div>
+                                <div class="results-message">
+                                    <!-- Сообщения будут заполнены JavaScript в зависимости от результата -->
+                                </div>
+                                <div class="quiz-actions">
+                                    <button class="btn btn-secondary restart-quiz">Пройти еще раз</button>
+                                    <a href="blockchain.html" class="btn">Изучить материал</a>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-navigation">
+                                <button class="quiz-prev" disabled>Назад</button>
+                                <button class="quiz-next">Далее</button>
+                                <button class="quiz-submit">Проверить результаты</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Тест по TON -->
+                    <div id="ton" class="quiz-container fade-in">
+                        <h3 class="quiz-title">Тест: Блокчейн TON</h3>
+                        
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-text">Вопрос <span class="current-question">1</span> из <span class="total-questions">5</span></div>
+                        </div>
+                        
+                        <div class="quiz-questions">
+                            <!-- Вопрос 1 -->
+                            <div class="quiz-question active" data-question="1">
+                                <h4>Чем TON отличается от других блокчейнов?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q1-a1" name="ton-q1">
+                                        <label for="ton-q1-a1">Это первый в мире блокчейн</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q1-a2" name="ton-q1">
+                                        <label for="ton-q1-a2">Он работает только с криптовалютой TON</label>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="ton-q1-a3" name="ton-q1">
+                                        <label for="ton-q1-a3">Многоуровневая архитектура, высокая скорость и интеграция с Telegram</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q1-a4" name="ton-q1">
+                                        <label for="ton-q1-a4">Это закрытый блокчейн с ограниченным доступом</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Верно! TON отличается многоуровневой архитектурой, высокой скоростью обработки транзакций, низкими комиссиями и интеграцией с Telegram.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. TON отличается многоуровневой архитектурой, высокой скоростью обработки транзакций, низкими комиссиями и интеграцией с Telegram.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 2 -->
+                            <div class="quiz-question" data-question="2">
+                                <h4>Что такое "мастерчейн" и "воркчейны" в архитектуре TON?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="ton-q2-a1" name="ton-q2">
+                                        <label for="ton-q2-a1">Мастерчейн — основная цепочка, а воркчейны — параллельные цепочки для разных задач</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q2-a2" name="ton-q2">
+                                        <label for="ton-q2-a2">Мастерчейн — для хранения криптовалюты, воркчейны — для смарт-контрактов</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q2-a3" name="ton-q2">
+                                        <label for="ton-q2-a3">Мастерчейн — для разработчиков, воркчейны — для обычных пользователей</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q2-a4" name="ton-q2">
+                                        <label for="ton-q2-a4">Это разные названия для одной и той же цепочки блоков</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Правильно! Мастерчейн координирует работу всей системы, а воркчейны — это отдельные блокчейны, работающие параллельно и специализирующиеся на определенных задачах.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. Мастерчейн — это основная цепочка, которая координирует работу всей системы, а воркчейны — это отдельные блокчейны, работающие параллельно и специализирующиеся на определенных задачах.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 3 -->
+                            <div class="quiz-question" data-question="3">
+                                <h4>Как многоуровневая архитектура помогает TON обрабатывать миллионы транзакций?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q3-a1" name="ton-q3">
+                                        <label for="ton-q3-a1">Благодаря использованию более мощных компьютеров</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q3-a2" name="ton-q3">
+                                        <label for="ton-q3-a2">За счет ограничения количества пользователей</label>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="ton-q3-a3" name="ton-q3">
+                                        <label for="ton-q3-a3">Через распределение нагрузки по разным цепочкам, работающим параллельно</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q3-a4" name="ton-q3">
+                                        <label for="ton-q3-a4">За счет более простых транзакций</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Верно! TON распределяет нагрузку по мастерчейну, воркчейнам и шардам, что позволяет обрабатывать множество операций одновременно.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. Многоуровневая архитектура TON распределяет нагрузку по мастерчейну, воркчейнам и шардам, что позволяет обрабатывать множество операций одновременно.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 4 -->
+                            <div class="quiz-question" data-question="4">
+                                <h4>Как можно объяснить механизм работы TON через аналогию с супермаркетом?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="ton-q4-a1" name="ton-q4">
+                                        <label for="ton-q4-a1">TON похож на супермаркет с множеством касс, обслуживающих покупателей одновременно</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q4-a2" name="ton-q4">
+                                        <label for="ton-q4-a2">TON похож на прилавок, где один продавец обслуживает всех покупателей</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q4-a3" name="ton-q4">
+                                        <label for="ton-q4-a3">TON похож на склад, где товары ждут своей очереди на отправку</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q4-a4" name="ton-q4">
+                                        <label for="ton-q4-a4">TON похож на магазин, где каждый товар продается отдельно</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Правильно! Обычный блокчейн похож на одну кассу с длинной очередью, а TON — на супермаркет с множеством касс, работающих одновременно и обменивающихся информацией.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. Обычный блокчейн похож на одну кассу с длинной очередью, а TON — на супермаркет с множеством касс, работающих одновременно и обменивающихся информацией.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Вопрос 5 -->
+                            <div class="quiz-question" data-question="5">
+                                <h4>Почему TON подходит для проекта SmAIth Start?</h4>
+                                <div class="quiz-options">
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q5-a1" name="ton-q5">
+                                        <label for="ton-q5-a1">Потому что TON — самый старый блокчейн</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q5-a2" name="ton-q5">
+                                        <label for="ton-q5-a2">Потому что TON работает только с проектами искусственного интеллекта</label>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true">
+                                        <input type="radio" id="ton-q5-a3" name="ton-q5">
+                                        <label for="ton-q5-a3">Благодаря скорости, низким комиссиям, масштабируемости и интеграции с Telegram</label>
+                                    </div>
+                                    <div class="quiz-option">
+                                        <input type="radio" id="ton-q5-a4" name="ton-q5">
+                                        <label for="ton-q5-a4">Потому что все другие блокчейны уже перегружены</label>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback correct">
+                                    <p>Верно! TON идеально подходит для SmAIth Start благодаря высокой скорости обработки транзакций, низким комиссиям, хорошей масштабируемости и огромной потенциальной аудитории пользователей Telegram.</p>
+                                </div>
+                                <div class="quiz-feedback incorrect">
+                                    <p>Неверно. TON подходит для SmAIth Start благодаря высокой скорости обработки транзакций, низким комиссиям, хорошей масштабируемости и огромной потенциальной аудитории пользователей Telegram.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-results">
+                                <h3>Результаты теста</h3>
+                                <div class="results-score">
+                                    <p>Вы ответили правильно на <span class="score">0</span> из <span class="total">5</span> вопросов.</p>
+                                </div>
+                                <div class="results-message">
+                                    <!-- Сообщения будут заполнены JavaScript в зависимости от результата -->
+                                </div>
+                                <div class="quiz-actions">
+                                    <button class="btn btn-secondary restart-quiz">Пройти еще раз</button>
+                                    <a href="ton.html" class="btn">Изучить материал</a>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-navigation">
+                                <button class="quiz-prev" disabled>Назад</button>
+                                <button class="quiz-next">Далее</button>
+                                <button class="quiz-submit">Проверить результаты</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Здесь будут аналогичные блоки для тестов по остальным темам -->
+                    
+                </div>
+                
+                <!-- Боковая панель -->
+                <div class="content-sidebar">
+                    <div class="sidebar-module">
+                        <h3>Выберите тест</h3>
+                        <ul class="sidebar-menu">
+                            <li><a href="#blockchain" class="topic-link">Блокчейн</a></li>
+                            <li><a href="#ton" class="topic-link">Блокчейн TON</a></li>
+                            <li><a href="#smth-token" class="topic-link">Токен SMTH</a></li>
+                            <li><a href="#tokenomics" class="topic-link">Токеномика</a></li>
+                            <li><a href="#platform" class="topic-link">Платформа SmAIth Start</a></li>
+                            <li><a href="#all" class="topic-link">Полный тест</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-module">
+                        <h3>Изучить материалы</h3>
+                        <ul class="sidebar-menu">
+                            <li><a href="blockchain.html">Блокчейн</a></li>
+                            <li><a href="ton.html">Блокчейн TON</a></li>
+                            <li><a href="smth-token.html">Токен SMTH</a></li>
+                            <li><a href="tokenomics.html">Токеномика</a></li>
+                            <li><a href="platform.html">Платформа SmAIth Start</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-module">
+                        <h3>Статистика</h3>
+                        <div class="quiz-stats">
+                            <div class="stats-item">
+                                <div class="stats-label">Завершено тестов:</div>
+                                <div class="stats-value" id="completed-tests">0/6</div>
+                            </div>
+                            <div class="stats-item">
+                                <div class="stats-label">Средний результат:</div>
+                                <div class="stats-value" id="average-score">0%</div>
+                            </div>
+                            <button class="sidebar-btn reset-stats">Сбросить статистику</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">SMTH Learn</div>
+            <p>Образовательный портал о блокчейне, TON и SmAIth Start</p>
+            
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Главная</a>
+                <a href="blockchain.html" class="footer-link">Блокчейн</a>
+                <a href="ton.html" class="footer-link">TON</a>
+                <a href="smth-token.html" class="footer-link">Токен SMTH</a>
+                <a href="tokenomics.html" class="footer-link">Токеномика</a>
+                <a href="platform.html" class="footer-link">Платформа</a>
+                <a href="quiz.html" class="footer-link">Тесты</a>
+            </div>
+            
+            <p class="footer-copyright">© 2025 SmAIth Learn. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

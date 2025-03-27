@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Экономическая модель токена SMTH</text>
+  
+  <!-- Definitions for arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- Token Distribution Pie Chart -->
+  <g transform="translate(250, 220)">
+    <!-- Pie chart segments -->
+    <path d="M 0 0 L 0 -120 A 120 120 0 0 1 104 -60 Z" fill="#3498db"/>
+    <path d="M 0 0 L 104 -60 A 120 120 0 0 1 104 60 Z" fill="#e74c3c"/>
+    <path d="M 0 0 L 104 60 A 120 120 0 0 1 0 120 Z" fill="#2ecc71"/>
+    <path d="M 0 0 L 0 120 A 120 120 0 0 1 -120 0 Z" fill="#f39c12"/>
+    <path d="M 0 0 L -120 0 A 120 120 0 0 1 0 -120 Z" fill="#9b59b6"/>
+    
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="40" fill="white"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">SMTH</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">1.5 млрд</text>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Макс.</text>
+    
+    <!-- Labels -->
+    <text x="60" y="-90" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">40%</text>
+    <text x="60" y="-70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Команда</text>
+    
+    <text x="120" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">30%</text>
+    <text x="120" y="20" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">DAO</text>
+    
+    <text x="60" y="90" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">20%</text>
+    <text x="60" y="110" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Резерв</text>
+    
+    <text x="-80" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">10%</text>
+    <text x="-80" y="50" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Ликвидность</text>
+  </g>
+  
+  <!-- Token Flow Diagram -->
+  <g transform="translate(550, 220)">
+    <!-- Central token symbol -->
+    <circle cx="0" cy="0" r="50" fill="#f1c40f" stroke="#d35400" stroke-width="2"/>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2c3e50">SMTH</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Токен</text>
+    
+    <!-- Arrows and flow paths -->
+    <!-- Burn -->
+    <path d="M -20 -40 L -20 -100" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="-20" y="-120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#e74c3c">Сжигание</text>
+    
+    <!-- Staking -->
+    <path d="M 40 -35 L 100 -80" stroke="#2ecc71" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="120" y="-85" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2ecc71">Стейкинг</text>
+    
+    <!-- Project Funding -->
+    <path d="M 35 35 L 100 70" stroke="#3498db" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="130" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#3498db">Финансирование</text>
+    <text x="130" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#3498db">проектов</text>
+    
+    <!-- Revenue Return -->
+    <path d="M -35 35 L -100 70" stroke="#9b59b6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text x="-130" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#9b59b6">Возврат</text>
+    <text x="-130" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#9b59b6">доходов</text>
+  </g>
+  
+  <!-- Stabilization Mechanisms -->
+  <rect x="100" y="400" width="600" height="150" rx="10" ry="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="400" y="430" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Механизмы стабилизации SMTH</text>
+  
+  <!-- Mechanism Icons -->
+  <circle cx="200" cy="480" r="25" fill="#e74c3c"/>
+  <text x="200" y="485" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">🔥</text>
+  <text x="200" y="520" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Частичное</text>
+  <text x="200" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">сжигание токенов</text>
+  
+  <circle cx="333" cy="480" r="25" fill="#2ecc71"/>
+  <text x="333" y="485" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">📈</text>
+  <text x="333" y="520" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Вознаграждения</text>
+  <text x="333" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">за стейкинг</text>
+  
+  <circle cx="466" cy="480" r="25" fill="#3498db"/>
+  <text x="466" y="485" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">⛓️</text>
+  <text x="466" y="520" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Лимиты на крупные</text>
+  <text x="466" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">транзакции</text>
+  
+  <circle cx="600" cy="480" r="25" fill="#9b59b6"/>
+  <text x="600" y="485" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">🛡️</text>
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Защита от</text>
+  <text x="600" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">манипуляций</text>
+</svg>

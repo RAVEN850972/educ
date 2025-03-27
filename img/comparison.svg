@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Сравнение традиционного инвестирования и SmAIth Start</text>
+  
+  <!-- Divider line -->
+  <line x1="400" y1="80" x2="400" y2="560" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Traditional Column -->
+  <text x="200" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#e74c3c">Традиционное инвестирование</text>
+  
+  <!-- SmAIth Column -->
+  <text x="600" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2ecc71">SmAIth Start</text>
+  
+  <!-- Row 1: Entry barriers -->
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Порог входа</text>
+  
+  <rect x="50" y="160" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#e74c3c">Высокий</text>
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">От $10,000 до $100,000+</text>
+  
+  <rect x="450" y="160" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="600" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2ecc71">Низкий</text>
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">От $10 в токенах SMTH</text>
+  
+  <!-- Row 2: Transparency -->
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Прозрачность</text>
+  
+  <rect x="50" y="270" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="200" y="290" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#e74c3c">Низкая</text>
+  <text x="200" y="310" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">Закрытые процессы принятия решений</text>
+  
+  <rect x="450" y="270" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="600" y="290" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2ecc71">Высокая</text>
+  <text x="600" y="310" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">Все операции записаны в блокчейне</text>
+  
+  <!-- Row 3: Control -->
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Контроль инвестора</text>
+  
+  <rect x="50" y="380" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="200" y="400" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#e74c3c">Ограниченный</text>
+  <text x="200" y="420" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">Только для крупных инвесторов</text>
+  
+  <rect x="450" y="380" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2ecc71">Прямое участие</text>
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">Голосование за каждый этап проекта</text>
+  
+  <!-- Row 4: Risk level -->
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Уровень риска</text>
+  
+  <rect x="50" y="490" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="200" y="510" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#e74c3c">Высокий</text>
+  <text x="200" y="530" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">Единовременные инвестиции без контроля</text>
+  
+  <rect x="450" y="490" width="300" height="60" rx="5" ry="5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="600" y="510" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2ecc71">Контролируемый</text>
+  <text x="600" y="530" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7f8c8d">Поэтапное финансирование и контроль</text>
+</svg>

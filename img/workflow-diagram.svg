@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f7fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Процесс работы платформы SmAIth Start</text>
+  
+  <!-- Definitions for arrows -->
+  <defs>
+    <marker id="flow-arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  
+  <!-- Workflow Steps -->
+  <!-- Step 1: Project Submission -->
+  <rect x="50" y="100" width="150" height="80" rx="10" ry="10" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="125" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">1. Подача</text>
+  <text x="125" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">проекта</text>
+  <text x="125" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Описание и бюджет</text>
+  
+  <!-- Step 2: Evaluation -->
+  <rect x="250" y="100" width="150" height="80" rx="10" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="325" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">2. Оценка</text>
+  <text x="325" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">проекта</text>
+  <text x="325" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Экспертиза и скоринг</text>
+  
+  <!-- Step 3: Voting -->
+  <rect x="450" y="100" width="150" height="80" rx="10" ry="10" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <text x="525" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">3. Голосование</text>
+  <text x="525" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">DAO</text>
+  <text x="525" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Принятие решения</text>
+  
+  <!-- Step 4: Funding -->
+  <rect x="650" y="100" width="150" height="80" rx="10" ry="10" fill="#f39c12" stroke="#d35400" stroke-width="2"/>
+  <text x="725" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">4. Начальное</text>
+  <text x="725" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">финансирование</text>
+  <text x="725" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Первый транш</text>
+  
+  <!-- Step 5: Development -->
+  <rect x="650" y="240" width="150" height="80" rx="10" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="725" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">5. Разработка</text>
+  <text x="725" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">и отчётность</text>
+  <text x="725" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Создание прототипа</text>
+  
+  <!-- Step 6: Milestone Evaluation -->
+  <rect x="450" y="240" width="150" height="80" rx="10" ry="10" fill="#1abc9c" stroke="#16a085" stroke-width="2"/>
+  <text x="525" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">6. Оценка</text>
+  <text x="525" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">результатов</text>
+  <text x="525" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Проверка этапа</text>
+  
+  <!-- Step 7: Next Funding Round -->
+  <rect x="250" y="240" width="150" height="80" rx="10" ry="10" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+  <text x="325" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">7. Следующий</text>
+  <text x="325" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">транш</text>
+  <text x="325" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Дальнейшее финансирование</text>
+  
+  <!-- Step 8: Project Completion -->
+  <rect x="50" y="240" width="150" height="80" rx="10" ry="10" fill="#f1c40f" stroke="#f39c12" stroke-width="2"/>
+  <text x="125" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">8. Завершение</text>
+  <text x="125" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">проекта</text>
+  <text x="125" y="310" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Коммерциализация</text>
+  
+  <!-- Step 9: Revenue Distribution -->
+  <rect x="50" y="380" width="150" height="80" rx="10" ry="10" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="125" y="410" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">9. Распределение</text>
+  <text x="125" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">доходов</text>
+  <text x="125" y="450" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Выплаты инвесторам</text>
+  
+  <!-- Workflow Arrows -->
+  <path d="M 200 140 L 250 140" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  <path d="M 400 140 L 450 140" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  <path d="M 600 140 L 650 140" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  <path d="M 725 180 L 725 240" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  <path d="M 650 280 L 600 280" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  <path d="M 450 280 L 400 280" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  <path d="M 250 280 L 200 280" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  <path d="M 125 320 L 125 380" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#flow-arrow)"/>
+  
+  <!-- Loop Arrow -->
+  <path d="M 350 240 C 400 200, 500 200, 550 240" stroke="#2c3e50" stroke-width="3" fill="none" stroke-dasharray="5,5" marker-end="url(#flow-arrow)"/>
+  <text x="450" y="215" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#2c3e50">Повторяется для каждого этапа</text>
+  
+  <!-- Potential Outcomes -->
+  <rect x="400" y="380" width="350" height="180" rx="10" ry="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="575" y="410" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">Потенциальные результаты для участников</text>
+  
+  <!-- Investors benefits -->
+  <circle cx="455" cy="450" r="20" fill="#3498db"/>
+  <text x="455" y="455" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">$</text>
+  <text x="520" y="440" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="left" fill="#2c3e50">Инвесторы получают:</text>
+  <text x="520" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="left" fill="#2c3e50">• Доход от успешных проектов</text>
+  <text x="520" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="left" fill="#2c3e50">• Рост стоимости SMTH токенов</text>
+  
+  <!-- Developer benefits -->
+  <circle cx="455" cy="515" r="20" fill="#2ecc71"/>
+  <text x="455" y="520" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">👨‍💻</text>
+  <text x="520" y="505" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="left" fill="#2c3e50">Разработчики получают:</text>
+  <text x="520" y="525" font-family="Arial, sans-serif" font-size="12" text-anchor="left" fill="#2c3e50">• Необходимое финансирование</text>
+  <text x="520" y="545" font-family="Arial, sans-serif" font-size="12" text-anchor="left" fill="#2c3e50">• Экспертную поддержку и продвижение</text>
+</svg>
